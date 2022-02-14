@@ -32,7 +32,7 @@ Sample of Polygon:
 4. Centroid
 5. Angle of each vertex
 
-## Example:
+## Usage example:
 
 ```python
 
