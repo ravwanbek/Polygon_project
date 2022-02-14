@@ -67,7 +67,8 @@ class Polygon:
         Returns:
             the perimeter of the polygon
         """
-        pass
+        return sum([self.distance(*side) for side in self.sides()])
+             
 
     #Define the method to calculate the angle between two sides
     def angles(self) -> list:
