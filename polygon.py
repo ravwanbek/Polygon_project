@@ -119,5 +119,18 @@ class Polygon:
         Returns:
             a pair of coordinates (x, y)
         """
-        pass
+        # polygon finds centroid
+        vertices = self.vertices
+        polygon_area = self.area()
+        polygon_sides = self.sides()
+        
+        x_sum = 0
+        y_sum = 0
+        for i in range(len(vertices)):
+            x_sum += vertices[i][0] * polygon_sides[i]
+            y_sum += vertices[i][1] * polygon_sides[i]
+
+        x_centroid = x_sum / (6 * polygon_area)
+        y_centroid = y_sum / (6 * polygon_area)
+        return (round(x_centroid, 2), round(y_centroid, 2))
 
