@@ -33,12 +33,7 @@ class Polygon:
         """
         pass
     
-    # Calculate the area of the polygon
-    def area(self) -> float:
-        """
-        Calculate the area of the polygon.
-        """
-        pass
+
     # Distance between two points
     def distance(self, p1: tuple, p2: tuple) -> float:
         """
@@ -52,7 +47,7 @@ class Polygon:
         # d = √[(x2 − x1)**2 + (y2 − y1)**2]
         x1, y1 = p1
         x2, y2 = p2
-        return math.sqrt( pow(x2 − x1, 2) + pow(y2 − y1, 2))
+        return math.sqrt( pow(x2 - x1, 2) + pow(y2 - y1, 2))
         
 
     #Define the method to get all sides of the length of the polygon
@@ -62,7 +57,10 @@ class Polygon:
         Returns:
             a list of all sides of the polygon
         """
-        pass
+        vertices = self.vertices
+        # polygon finds sides by going through each vertex and the next vertex
+        polygon_sides = [self.distance(vertices[-1], vertices[0])] + [self.distance(vertices[i], vertices[i+1]) for i in range(len(vertices)-1)]
+        return polygon_sides
      
      # Define the method to calculate the perimeter of the polygon
     def perimeter(self) -> float:
@@ -74,6 +72,12 @@ class Polygon:
 
         return sum([self.distance(*side) for side in self.sides()])
 
+    # Calculate the area of the polygon
+    def area(self) -> float:
+        """
+        Calculate the area of the polygon.
+        """
+        pass
 
     #Define the method to calculate the angle between two sides
     def angles(self) -> list:
