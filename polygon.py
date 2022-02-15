@@ -110,7 +110,16 @@ class Polygon:
         Returns:
             a list of all angles of the polygon
         """
-        pass
+        # polygon finds angles by going through each vertex and the next vertex
+        polygon_area = self.area()
+        polygon_sides = self.sides()
+        polygon_angles = set()
+        for a in polygon_sides:
+            for b in polygon_sides:
+                if a != b:
+                    alpha = math.degrees(math.asin(2*polygon_area/(a*b)))
+                    polygon_angles.add(alpha)
+        return list(polygon_angles)
         
     #Define the method to calculate the centroid of the polygon
     def centroid(self) -> tuple:
