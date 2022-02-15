@@ -49,7 +49,11 @@ class Polygon:
         Returns:
             the distance between p1 and p2
         """
-        pass
+        # d = √[(x2 − x1)**2 + (y2 − y1)**2]
+        x1, y1 = p1
+        x2, y2 = p2
+        return math.sqrt( pow(x2 − x1, 2) + pow(y2 − y1, 2))
+        
 
     #Define the method to get all sides of the length of the polygon
     def sides(self) -> list:
@@ -67,8 +71,9 @@ class Polygon:
         Returns:
             the perimeter of the polygon
         """
+
         return sum([self.distance(*side) for side in self.sides()])
-             
+
 
     #Define the method to calculate the angle between two sides
     def angles(self) -> list:
