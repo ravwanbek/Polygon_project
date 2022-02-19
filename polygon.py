@@ -34,6 +34,8 @@ class Polygon:
         pass
     
 
+
+
     # Distance between two points
     def distance(self, p1: tuple, p2: tuple) -> float:
         """
@@ -142,4 +144,28 @@ class Polygon:
         x_centroid = x_sum / (6 * polygon_area)
         y_centroid = y_sum / (6 * polygon_area)
         return (round(x_centroid, 2), round(y_centroid, 2))
+
+
+
+
+
+
+uchburchak = Polygon([(6.00,5.00), (3.50,2.00), (9.00,2.00)])
+
+print(f'Uchburchak yuzi: {uchburchak.area():.2f}')
+
+print(f'Uchburchak perimetri: {uchburchak.perimeter():.2f}')
+
+print(f'Uchburchak tomonlari: {uchburchak.sides()}')
+
+print(f'Uchburchak burchaklari: {uchburchak.angles()}')
+
+tortburchak= Polygon([(1.00,1.00), (1.00,5.00), (6.00,1.00),(6.00,5.00)])
+
+print(f'To\'rtburchak yuzi: {tortburchak.area():.2f}')
+
+print(f'To\'rtburchak perimetri: {tortburchak.perimeter():.2f}')
+
+print(f'To\'rtburchak tomonlari: {tortburchak.sides()}')
+
 
