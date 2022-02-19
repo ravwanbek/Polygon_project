@@ -160,6 +160,8 @@ print(f'Uchburchak tomonlari: {uchburchak.sides()}')
 
 print(f'Uchburchak burchaklari: {uchburchak.angles()}')
 
+print(f'Uchburchak burchaklari: {uchburchak.centroid()}')
+
 tortburchak= Polygon([(1.00,1.00), (1.00,5.00), (6.00,1.00),(6.00,5.00)])
 
 print(f'To\'rtburchak yuzi: {tortburchak.area():.2f}')
@@ -167,5 +169,8 @@ print(f'To\'rtburchak yuzi: {tortburchak.area():.2f}')
 print(f'To\'rtburchak perimetri: {tortburchak.perimeter():.2f}')
 
 print(f'To\'rtburchak tomonlari: {tortburchak.sides()}')
+
+print(f'To\'rtburchak tomonlari: {tortburchak.centroid()}')
+
 
 
